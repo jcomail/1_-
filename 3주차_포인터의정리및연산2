@@ -5,3 +5,7 @@ p = p + 1;
 printf("%d", p);
 
 ##2
+char *p;
+p = 100;
+p = p +4;
+printf("%d", p);
