@@ -43,4 +43,18 @@ int main() {
                 printf("\n상품ID: %d상품ID");
                 break;
             }
+            printf("판매수량: %d판매수량");
+            scanf("%d", &qty);
+            products[num - 1].stock_in += qty;
+            products[num - 1].stock += qty;
+            printf(".\n", num, qty);
+break;
+
+
+default:
+    printf("잘못된 선택입니다.\n");
+
+printf("프로그램을 종료합니다.\n");
+return 0;
+}
             중간저장
