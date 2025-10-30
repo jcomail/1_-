@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+	int x, y, ch;
+	char buffer[100];
+
+	fscanf(stdin, "%d %d", &x, &y);
+	fprintf(stdout, "%d %d\n", x, y);
+	while((ch = getchar()) != '\n');
+	fgets(buffer, 100, stdin);
+	fputs(buffer, stdout);
+	return 0;
+}
+
+##FILE* 파일 포인터 변환,          파일 열기 모드
+FILE* fopen(const char* filename, const char* mode);
+FILE* fp = fopen("test.txt", "w"); ##파일 포인터 반환
+##파일 열기 모드 "r" = 읽기 형식(반드시 파일이 존재해야함)
+                "w" = 쓰기 형식(파일이 존재하면 기존 내용 삭제, 빈 파일로 간주)
+                "a" = 확장모드로 이어쓰기
+	"r+" = 파일을 읽기 및 쓰기 형식으로 엶 (r)
+	"w+" = 파일이 존재하지 않으면 빈 파일로 생성
+	"a+" = 파일을 읽기 및 쓰기 형식으로 엶(읽기는 위치 탐색, 쓰기는 맨 끝)
+	##파일 사용 완료 후 반드시
+	int fclose(FILE* stream);
+fclose(fp);
