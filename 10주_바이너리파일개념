@@ -1,0 +1,12 @@
+##스트림 위치 지정자 처리 함수
+
+size_t fread(void* ptr, size_t size, size_t count, FILE* stream);
+size_t fwrite(const void* ptr, size_t size, size_t count, FILE* stream);
+
+long int ftell(FILE* stream);
+int feof(FILE* stream);
+int fsrrk(FILE* stream, long int offset, int origin);
+int fsetpos(FILE* stream, const fpos_t* pos);
+int fsetpos(FILE* stream, const fpos_t* pos);
+
+void rewind(FILE* stream);
