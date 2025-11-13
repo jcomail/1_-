@@ -1,0 +1,25 @@
+//사용자로부터 입력받은 숫자만큼 배열을 생성하고 싶다.
+int size;
+int array[size];
+scanf("%d", &size);
+array[0] = 4;
+
+//내가 짠 프로그램이 메모리에 저장되는 방식?
+int add(int a, int b) {
+	return a + b;
+}
+int main() {
+	int i, j, k;
+	i = 10;
+	j = 20;
+	k = add(10, 20);
+	return 0;
+} //함수가 호출될 때 이미 변수의 크기는 결정되어 있다
+
+//동적할당을 해주는 함수를 활용한다.사용 후 반납해야함
+#include <stdlib.h>
+
+void* malloc(size_t size); //바이트단위 size만큼 메모리 할당(반환: 할당 메모리 시작주소)
+void free(void* ptr); //할당받은 메모리 해제
+//malloc : size byte만큼 heap영역 메모리 할당후 메모리 주소 반환
+//free :ptr의 메모리 주소(할당한 공간)할당 해제
